@@ -1,13 +1,244 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    'Roboto',
+    'Oxygen',
+    'Ubuntu',
+    'Cantarell',
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: rgb(250, 250, 250);
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family:
+    source-code-pro,
+    Menlo,
+    Monaco,
+    Consolas,
+    'Courier New',
     monospace;
+}
+
+/* DEFAULT ====================== */
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.has-navbar {
+  padding-top: 100px;
+}
+
+button {
+  transition: 0.2s;
+}
+
+button:hover,
+input[type=submit]:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+/* NAVBAR ======================= */
+
+nav {
+  background: white;
+  border-bottom: 1px solid #eee;
+}
+
+nav > div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.brand {
+  margin: 14px 0;
+  font-size: 24px;
+  color: #0290ff;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-size: 14px;
+  padding: 0 15px;
+  color: #9e9e9e;
+  transition: 0.2s;
+}
+
+.book-actions a {
+  color: #0290ff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+nav ul li a:hover,
+.active-link {
+  color: black;
+  font-weight: bold;
+}
+
+/* BOOKS ======================== */
+
+.book {
+  display: flex;
+  background-color: white;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  padding: 30px 20px;
+}
+
+/* First Half */
+
+.book-details {
+  width: 50%;
+}
+
+.book-category {
+  font-size: 14px;
+  font-weight: bold;
+  color: #a7a7a7;
+  margin: 0;
+}
+
+.book-name {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 6px 0;
+}
+
+.book-author {
+  font-size: 16px;
+  color: #0290ff;
+  margin: 0 0 20px 0;
+}
+
+.book-actions {
+  color: #c0c0c0;
+}
+
+/* Second Half */
+
+.book-status {
+  display: flex;
+  width: 50%;
+}
+
+.book-progress {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.book-progress-fill {
+  height: 5px;
+  background: #0290ff;
+  position: absolute;
+  top: 20px;
+  z-index: 2;
+  width: 80px;
+}
+
+.book-progress-background {
+  height: 5px;
+  background: lightgrey;
+  position: absolute;
+  top: 20px;
+  width: 100px;
+}
+
+.book-progress-percentage {
+  font-size: 30px;
+  margin: 0;
+}
+
+.book-progress :nth-child(5) {
+  margin: 0;
+  color: #9e9e9e;
+}
+
+/* --- */
+
+.book-chapter {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.book-chapter p:nth-child(1) {
+  font-size: 12px;
+  margin: 0;
+  color: #9e9e9e;
+}
+
+.book-chapter-current {
+  margin: 6px 0 20px 0;
+}
+
+.book-chapter-update {
+  background-color: #0290ff;
+  border: 0;
+  border-radius: 4px;
+  padding: 6px 20px;
+  color: whitesmoke;
+}
+
+/* ADD BOOKS ==================== */
+
+.book-add-title {
+  margin-top: 40px;
+  padding-top: 30px;
+  border-top: 3px solid rgb(230, 230, 230);
+  color: grey;
+  font-size: 22px;
+}
+
+.book-input {
+  width: 360px;
+  margin-right: 40px;
+}
+
+.book-add-form {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+}
+
+.book-add-input {
+  width: calc(100% - 490px);
+  border: 1px solid lightgray;
+  border-radius: 4px;
+}
+
+.book-add-category {
+  width: 250px;
+  border: 1px solid lightgray;
+  border-radius: 4px;
+}
+
+.book-add-button {
+  width: 200px;
+  padding: 10px;
+  background: #0290ff;
+  color: white;
+  border: 0;
+  border-radius: 4px;
 }
