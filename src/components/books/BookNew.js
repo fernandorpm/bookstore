@@ -9,15 +9,10 @@ const BookNew = () => {
   const dispatch = useDispatch();
 
   const [title, setTitle] = useState('');
-  const [author, setAuthor] = useState('');
   const [category, setCategory] = useState('');
 
   const handleTitle = (e) => {
     setTitle(e.target.value);
-  };
-
-  const handleAuthor = (e) => {
-    setAuthor(e.target.value);
   };
 
   const handleCategory = (e) => {
@@ -28,7 +23,6 @@ const BookNew = () => {
     const newBook = {
       id: uuidv4(),
       title,
-      author,
       category,
     };
 
@@ -36,7 +30,6 @@ const BookNew = () => {
     dispatch(addBook(newBook));
 
     setTitle('');
-    setAuthor('');
     setCategory('');
   };
 
@@ -45,7 +38,6 @@ const BookNew = () => {
       <h2 className="book-add-h">ADD NEW BOOK</h2>
       <div className="book-add-form">
         <input className="book-add-title" placeholder="Book Title" onChange={handleTitle} value={title} />
-        <input className="book-add-author" placeholder="Author" onChange={handleAuthor} value={author} />
         <select className="book-add-category" name="categories" id="categories" onChange={handleCategory} value={category}>
           <option value="">Category</option>
           <option value="action">Action</option>
