@@ -10,7 +10,6 @@ const Books = () => {
         key={book.id}
         id={book.id}
         title={book.title}
-        author={book.author}
         category={book.category}
       />
     ),

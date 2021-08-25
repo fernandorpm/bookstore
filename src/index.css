@@ -225,13 +225,7 @@ nav ul li a:hover,
 }
 
 .book-add-title {
-  width: 50%;
-  border: 1px solid lightgray;
-  border-radius: 4px;
-}
-
-.book-add-author {
-  width: 50%;
+  width: 100%;
   border: 1px solid lightgray;
   border-radius: 4px;
 }
