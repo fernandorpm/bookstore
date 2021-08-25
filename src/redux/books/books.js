@@ -22,9 +22,8 @@ export const addBook = (book) => ({
   book,
 });
 
-export const removeBook = (book, id) => ({
+export const removeBook = (id) => ({
   type: REMOVE_BOOK,
-  book,
   id,
 });
 
