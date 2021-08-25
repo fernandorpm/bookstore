@@ -53,6 +53,8 @@ input[type=submit]:hover {
 nav {
   background: white;
   border-bottom: 1px solid #eee;
+  position: fixed;
+  width: 100%;
 }
 
 nav > div {
@@ -203,7 +205,7 @@ nav ul li a:hover,
 
 /* ADD BOOKS ==================== */
 
-.book-add-title {
+.book-add-h {
   margin-top: 40px;
   padding-top: 30px;
   border-top: 3px solid rgb(230, 230, 230);
@@ -222,8 +224,14 @@ nav ul li a:hover,
   gap: 20px;
 }
 
-.book-add-input {
-  width: calc(100% - 490px);
+.book-add-title {
+  width: 50%;
+  border: 1px solid lightgray;
+  border-radius: 4px;
+}
+
+.book-add-author {
+  width: 50%;
   border: 1px solid lightgray;
   border-radius: 4px;
 }
