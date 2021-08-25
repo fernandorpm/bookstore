@@ -1,15 +1,27 @@
+import { useSelector } from 'react-redux';
 import Book from '../books/Book';
 import BookNew from '../books/BookNew';
 
-import bookList from '../../lists/bookList';
+const Books = () => {
+  const bookConfigureStore = useSelector((store) => store.booksReducer);
+  const allBooks = bookConfigureStore.map(
+    (book) => (
+      <Book
+        key={book.id}
+        id={book.id}
+        title={book.title}
+        author={book.author}
+        category={book.category}
+      />
+    ),
+  );
 
-const allBooks = bookList.map((book) => <Book key={book.id} info={book} />);
-
-const Books = () => (
-  <div className="container has-navbar">
-    { allBooks }
-    <BookNew className="book-new" />
-  </div>
-);
+  return (
+    <div className="container has-navbar">
+      { allBooks }
+      <BookNew className="book-new" />
+    </div>
+  );
+};
 
 export default Books;

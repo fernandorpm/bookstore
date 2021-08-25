@@ -1,36 +1,34 @@
-// // Actions
-// const ADD_BOOK = 'bookStore/books/ADD_BOOK';
-// const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
+// Actions
+const ADD_BOOK = 'bookStore/books/ADD_BOOK';
+const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
 
-// // Reducer
-// export default function reducer(state = [], action = {}) {
+// Reducer
+export default function reducer(state = [], action = {}) {
+  switch (action.type) {
+    case ADD_BOOK:
+      return [...state, action.book];
 
-//   switch (action.type) {
+    case REMOVE_BOOK:
+      return state.filter((b) => b.id !== action.id);
 
-//     case ADD_BOOK:
-//       return [ ...state, action.payload];
+    default:
+      return state;
+  }
+}
 
-//     case REMOVE_BOOK:
-//       return state.filter(book => book.id !== id);
+// Action Creators
+export const addBook = (book) => ({
+  type: ADD_BOOK,
+  book,
+});
 
-//     default:
-//       return state;
-//   }
-// }
+export const removeBook = (id) => ({
+  type: REMOVE_BOOK,
+  id,
+});
 
-// // Action Creators
-// export const addBook = payload => ({
-//   type: ADD_BOOK,
-//   payload
-// })
-
-// export const addBook = payload => ({
-//   type: REMOVE_BOOK,
-//   payload
-// })
-
-// // side effects, only as applicable
-// // e.g. thunks, epics, etc
-// export function getBook () {
-//   return dispatch => get('/book').then(book => dispatch(updateBook(book)))
+// side effects, only as applicable
+// e.g. thunks, epics, etc
+// export function getBook() {
+//   return (dispatch) => get('/book').then((book) => dispatch(updateBook(book)));
 // }
