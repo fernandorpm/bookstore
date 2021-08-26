@@ -9,14 +9,14 @@ import BookChapter from './BookChapter';
 import { removeBook } from '../../redux/books/books';
 
 const Book = ({
-  id, title, author, category, percentage, chapter,
+  id, title, category, percentage, chapter,
 }) => {
   const dispatch = useDispatch();
 
   return (
     <div className="book">
       <div className="book-details">
-        <BookInfo category={category} title={title} author={author} />
+        <BookInfo category={category} title={title} />
         <div className="book-actions">
           <a href="/#">Comments</a>
           {' | '}
@@ -37,7 +37,6 @@ Book.propTypes = {
   id: PropTypes.string.isRequired,
   category: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  author: PropTypes.string.isRequired,
   percentage: PropTypes.string,
   chapter: PropTypes.string,
 };

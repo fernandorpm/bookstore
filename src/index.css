@@ -153,7 +153,7 @@ nav ul li a:hover,
   height: 5px;
   background: #0290ff;
   position: absolute;
-  top: 20px;
+  top: 10px;
   z-index: 2;
   width: 80px;
 }
@@ -162,7 +162,7 @@ nav ul li a:hover,
   height: 5px;
   background: lightgrey;
   position: absolute;
-  top: 20px;
+  top: 10px;
   width: 100px;
 }
 
@@ -208,7 +208,7 @@ nav ul li a:hover,
 .book-add-h {
   margin-top: 40px;
   padding-top: 30px;
-  border-top: 3px solid rgb(230, 230, 230);
+  border-top: 3px solid #e6e6e6;
   color: grey;
   font-size: 22px;
 }

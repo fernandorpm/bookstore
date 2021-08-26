@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 
 import { addBook } from '../../redux/books/books';
+import getBooks from '../../redux/books/bookSlice';
 
 const BookNew = () => {
   const dispatch = useDispatch();
@@ -19,7 +20,7 @@ const BookNew = () => {
     setCategory(e.target.value);
   };
 
-  const submitBookToStore = () => {
+  const submitBookToStore = async () => {
     const newBook = {
       id: uuidv4(),
       title,
@@ -27,10 +28,13 @@ const BookNew = () => {
     };
 
     // dispatch an action and pass it the newBook object (your action's payload)
-    dispatch(addBook(newBook));
+    await dispatch(addBook(newBook));
 
     setTitle('');
     setCategory('');
+
+    await dispatch(getBooks());
+    document.location.reload(true);
   };
 
   return (
