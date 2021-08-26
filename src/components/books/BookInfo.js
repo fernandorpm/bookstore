@@ -5,6 +5,7 @@ const BookInfo = ({ category, title }) => (
   <div>
     <p className="book-category">{category}</p>
     <p className="book-title">{title}</p>
+    <p className="book-author">No Author</p>
   </div>
 );
 

@@ -42,8 +42,8 @@ Book.propTypes = {
 };
 
 Book.defaultProps = {
-  percentage: '0%',
-  chapter: '1',
+  percentage: '41%',
+  chapter: 'Chapter 1',
 };
 
 export default Book;
