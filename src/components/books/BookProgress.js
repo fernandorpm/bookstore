@@ -4,11 +4,14 @@ import PropTypes from 'prop-types';
 const BookProgress = ({ percentage }) => (
   <div className="book-progress">
     <i />
-    <div className="book-progress-fill" />
-    <div className="book-progress-background" />
+    <div className="book-progress-rectangle">
+      <div className="book-progress-circle" />
+    </div>
 
-    <p className="book-progress-percentage">{percentage}</p>
-    <p>Completed</p>
+    <div className="book-progress-text">
+      <p className="book-progress-percentage">{percentage}</p>
+      <p>Completed</p>
+    </div>
   </div>
 );
 
